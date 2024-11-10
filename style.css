@@ -1,0 +1,71 @@
+/* Base styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #74ebd5, #acb6e5);
+    animation: gradientAnimation 8s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Text content styling */
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Viewer and editor boxes styling */
+#viewer, #editor {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Read-only viewer with distinct styling */
+#viewer {
+    background-color: #f0f8ff;
+    color: #333;
+    resize: none;
+    pointer-events: none;
+}
+
+/* Editable editor styling */
+#editor {
+    background-color: #fffaf0;
+}
+
+/* Button styling */
+#saveButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#saveButton:hover {
+    background-color: #45a049;
+}
